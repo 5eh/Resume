@@ -1,12 +1,18 @@
-body {
-  margin: 0;
-  font-family: "Roboto Slab", serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #031421;
-  color: #ffffff;
+:root {
+  --bg-color: #031421;
+  --card-color: rgb(23, 23, 23);
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
+body {
+  align-items: center;
+  background-color: var(--bg-color);
+  display: flex;
+  height: 100vh;
+  margin: 0px;
+  overflow: hidden;
+  padding: 0px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
