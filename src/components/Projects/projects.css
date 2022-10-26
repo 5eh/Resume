@@ -1,0 +1,119 @@
+body {
+  background-color: #031421;
+  margin: 0px;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+#header {
+  color: rgba(199, 207, 230, 0.521);
+  font-weight: 800;
+  margin-left: 4vw;
+  margin-top: 2vw;
+}
+
+#menu {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  width: 30vw;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#menu-items {
+  margin-left: clamp(4rem, 6vw, 24rem);
+
+  position: relative;
+  z-index: 2;
+}
+
+#menu[data-active-index="0"] > #menu-background-pattern {
+  background-position: 0% -25%;
+}
+
+#menu[data-active-index="1"] > #menu-background-pattern {
+  background-position: 0% -50%;
+}
+
+#menu[data-active-index="2"] > #menu-background-pattern {
+  background-position: 0% -75%;
+}
+
+#menu[data-active-index="3"] > #menu-background-pattern {
+  background-position: 0% -100%;
+}
+
+#menu[data-active-index="0"] > #menu-background-image {
+  background-position: center 45%;
+}
+
+#menu[data-active-index="1"] > #menu-background-image {
+  background-position: center 50%;
+}
+
+#menu[data-active-index="2"] > #menu-background-image {
+  background-position: center 55%;
+}
+
+#menu[data-active-index="3"] > #menu-background-image {
+  background-position: center 60%;
+}
+
+#menu-background-image {
+  background-image: url("../../assets/layer1.png");
+  background-position: center 40%;
+  background-size: 110vmax;
+  height: 100%;
+  left: 0px;
+  opacity: 0.15;
+  position: absolute;
+  top: 0px;
+  transition: opacity 800ms ease, background-size 800ms ease,
+    background-position 800ms ease;
+  width: 100%;
+  z-index: 0;
+}
+
+#menu-items:hover ~ #menu-background-pattern {
+  background-size: 11vmin 11vmin;
+  opacity: 0.5;
+}
+
+#menu-items:hover ~ #menu-background-image {
+  background-size: 100vmax;
+  opacity: 0.2;
+}
+
+#menu-items:hover > .menu-item,
+.menu-context {
+  opacity: 0.2;
+}
+
+#menu-items:hover > .menu-item:hover,
+.menu-context {
+  opacity: 0.75;
+}
+
+.menu-item {
+  color: red;
+  cursor: pointer;
+  display: block;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: clamp(2rem, 2vw, 4rem);
+  padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+  text-decoration: none;
+  transition: opacity 650ms ease;
+}
+
+.menu-context {
+  opacity: 0;
+}
+
+.menu-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
