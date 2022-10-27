@@ -1,5 +1,5 @@
 import React from "react";
-import PictureArray from "./arrayListings";
+import PictureArray from "../Photography/arrayListings";
 
 const Photography = () => {
   return (
